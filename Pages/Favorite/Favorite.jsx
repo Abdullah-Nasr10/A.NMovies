@@ -1,21 +1,10 @@
-// import React from "react";
-// import "./Favorite.css";
-// function Favorite() {
-//   return <div>Favorite</div>;
-// }
-
-// export default Favorite;
-
 import "./Favorite.css";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFavorite } from "../../src/store/slices/favoriteSlice.js";
-// import { useContext } from "react";
-// import FavoriteContext from "../../Conext/FavoriteContext";
 import NoResult from "../../components/Content/NoResult/NoResult.jsx";
 import { IoHeartCircle as Heart } from "react-icons/io5";
 
 function Favorite() {
-  // const { favoritList, setFavoritList } = useContext(FavoriteContext);
   const favoritList = useSelector((state) => state.favorite.favoritList);
   const dispatch = useDispatch();
   const isFavoritExist = (item) => {
@@ -25,9 +14,6 @@ function Favorite() {
   const handleFavoritList = (item) => {
     dispatch(removeFavorite(item.movId));
   };
-  // const handleFavoritList = (item) => {
-  //   dispatch(toggleFavorite(item));
-  // };
 
   return (
     <>
