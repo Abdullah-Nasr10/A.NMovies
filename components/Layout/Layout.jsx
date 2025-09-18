@@ -21,7 +21,7 @@ function Layout() {
   return (
     <>
       <Navbar />
-      <div style={{ minHeight: "100vh" }}>
+      <div style={{ minHeight: "100vh", overflowX: "hidden" }}>
         <Outlet />
       </div>
       <Footer />

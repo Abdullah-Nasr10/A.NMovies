@@ -23,11 +23,11 @@ function Favorite() {
             {favoritList.map((item) => (
               <div className="row favoriteCard mb-4" key={item.movId}>
                 {/* ------------------imag-poster-------------------- */}
-                <div className="col-2 p-0">
+                <div className="col-12 col-md-4 col-lg-2 p-0">
                   <img src={item.poster} alt="Poster" className=" w-100" />
                 </div>
                 {/* ------------------moveieDetails-------------------- */}
-                <div className="col-10 p-4">
+                <div className="col-12 col-md-8 col-lg-10 p-4">
                   {/* ---------vote--------- */}
                   <div className="row center">
                     <div className="col-1 p-0">
