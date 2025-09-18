@@ -21,16 +21,19 @@ function Favorite() {
         {favoritList.length > 0 ? (
           <>
             {favoritList.map((item) => (
-              <div className="row favoriteCard mb-4" key={item.movId}>
+              <div
+                className="row favoriteCard mb-4 ms-3 ms-md-0 me-4 me-md-0 "
+                key={item.movId}
+              >
                 {/* ------------------imag-poster-------------------- */}
-                <div className="col-12 col-md-4 col-lg-2 p-0">
+                <div className="col-12 col-sm-2 col-md-4 col-lg-2 p-0">
                   <img src={item.poster} alt="Poster" className=" w-100" />
                 </div>
                 {/* ------------------moveieDetails-------------------- */}
-                <div className="col-12 col-md-8 col-lg-10 p-4">
+                <div className="col-12 col-sm-10 col-md-8 col-lg-10 p-4">
                   {/* ---------vote--------- */}
                   <div className="row center">
-                    <div className="col-1 p-0">
+                    <div className="col-12 col-lg-1 p-0 mb-3 mb-lg-0">
                       <div
                         className="vote center rounded-circle text-white "
                         style={{
@@ -44,7 +47,7 @@ function Favorite() {
                       </div>
                     </div>
                     {/* ------------Title------------ */}
-                    <div className="col-11 p-0">
+                    <div className="col-12 col-lg-11 p-0">
                       <h4 className="title mb-0 fw-bold">{item.movTitle}</h4>
                       <p className="date mb-0  fw-normal">{item.movDate}</p>
                     </div>
@@ -57,7 +60,7 @@ function Favorite() {
                   <p className="mt-4">{item.movOverview}</p>
                   {/* ----------------favoriteHeart----------- */}
                   <div className="row">
-                    <div className="col-2 d-flex align-items-center">
+                    <div className="col-12 col-md-6 col-lg-2 d-flex align-items-center">
                       <Heart
                         className={`fs-2 me-2 heartIcon ${
                           isFavoritExist(item) ? "fillRed" : ""
