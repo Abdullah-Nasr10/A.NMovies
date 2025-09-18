@@ -95,7 +95,6 @@ function Home() {
       {/* ======================Swiper-Card-Start============================ */}
       <div className="container cardSwiper">
         <Swiper
-          slidesPerView={6}
           spaceBetween={30}
           pagination={{
             clickable: true,
@@ -106,6 +105,26 @@ function Home() {
             disableOnInteraction: false,
           }}
           modules={[Pagination, Autoplay]}
+          breakpoints={{
+            300: {
+              slidesPerView: 1,
+            },
+            450: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            992: {
+              slidesPerView: 4,
+            },
+            1200: {
+              slidesPerView: 5,
+            },
+            1400: {
+              slidesPerView: 6,
+            },
+          }}
           className="mySwiper mt-5 pb-5"
         >
           {trending?.map((mov) => (
