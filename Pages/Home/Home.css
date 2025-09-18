@@ -1,0 +1,65 @@
+/* .mySwiper .swiper-slide {
+     width: 300px; 
+     أو أي عرض يناسب 
+} */
+
+.mySwiper img {
+    width: 75%;
+    /* border-radius: 10px; */
+}
+
+.homePosterContainer {
+    position: relative;
+
+    .show:hover {
+        cursor: pointer;
+        color: #21B9D6;
+    }
+}
+
+.homePosterContainer .homePosterOverlay {
+    position: absolute;
+    /* inset: 0; */
+    top: 0;
+    bottom: 0;
+    left: 12.5%;
+    right: 12.5%;
+    /* background-color: #000000b5; */
+    background: linear-gradient(to right,
+            #00000000 0%,
+            #000000cc 50%,
+            #00000000) 100%;
+}
+
+
+.cardSwiper .mySwiper {
+    /* overflow-x: hidden !important; */
+    overflow-y: visible !important;
+    /* overflow: visible !important; */
+}
+
+.cardSwiper .mySwiper .swiper-slide {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.homeIntroBanner {
+    /* background-color: #21B9D6; */
+
+    height: 300px;
+
+    position: relative;
+}
+
+.homeIntroBanner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://t3.ftcdn.net/jpg/09/68/64/82/360_F_968648260_97v6FNQWP3alhvyfLWtQTWGcrWZvAr1C.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
+}
